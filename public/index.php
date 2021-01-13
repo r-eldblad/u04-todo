@@ -1,5 +1,5 @@
 <?php
-
+include_once("Book.php");
 
 ?>
 
@@ -11,8 +11,7 @@
     <title>Filmanipulering</title>
 </head>
 <body>
-    <h1>Books</h1>
-    <h3>Books below</h3>
+    
 
 </body>
 </html>
