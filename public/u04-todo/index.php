@@ -6,13 +6,14 @@
     <title>TODO-App</title>
 </head>
 <body>
-<?php require_once(__DIR__ . '/db/database.php'); ?>
+<?php require_once(__DIR__ . '/create.php'); ?>
+<?php require(__DIR__ . '/db/database.php'); ?>
 
     <form action="" method="POST">
-        <label for="name">Title</label>
-        <input id="name" type="text" name="name" value="Enter title">
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title" placeholder="Enter title">
         <label for="name">Task</label>
-        <input id="task" type="text" name="name" value="Enter task">
+        <input id="task" type="text" name="task" placeholder="Enter task">
         <button type="submit" name="add">Add &#43;</button>
     </form>
 </body>
