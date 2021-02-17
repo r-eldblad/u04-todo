@@ -6,6 +6,8 @@
     <title>TODO-App</title>
 </head>
 <body>
+<?php require_once(__DIR__ . '/db/database.php'); ?>
+
     <form action="" method="POST">
         <label for="name">Title</label>
         <input id="name" type="text" name="name" value="Enter title">
