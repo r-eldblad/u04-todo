@@ -12,6 +12,7 @@ $data = $pdo->query($sql)->fetchAll();
         <th>ID</th>
         <th>Title</th>
         <th>Task</th>
+        <th>Action</th>
 </tr>
 
 <?php foreach($data as $row)
@@ -21,8 +22,13 @@ $data = $pdo->query($sql)->fetchAll();
         <td><?php echo $row['task_id']; ?></td>
         <td><?php echo $row['title']; ?></td>
         <td><?php echo $row['task_message']; ?></td>
+        <td>
+            <a href="index.php?edit=<?php echo $row['task_id']; ?>">Edit</a>
+            <a href="delete.php?delete=<?php echo $row['task_id'] ?>">Delete</a>
+        </td>
     </tr>
     <?php
 }
     ?>
+
 </table>
