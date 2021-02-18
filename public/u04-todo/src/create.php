@@ -1,7 +1,7 @@
 <?php
 
-require_once(__DIR__ . '/index.php');
-require_once(__DIR__ . '/db/database.php');
+require_once(__DIR__ . '/../index.php');
+require_once(__DIR__ . '/../db/database.php');
 
 
 if (isset($_POST['submit'])) {

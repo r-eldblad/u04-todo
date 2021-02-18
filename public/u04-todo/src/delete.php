@@ -1,7 +1,7 @@
 <?php
 
-require_once(__DIR__ . '/index.php');
-require_once(__DIR__ . "/db/database.php");
+require_once(__DIR__ . '/../index.php');
+require_once(__DIR__ . '/../db/database.php');
 
 if(isset($_GET['delete'])) {
     $id = $_GET['delete'];
@@ -10,7 +10,7 @@ if(isset($_GET['delete'])) {
     $stmt->execute();
 
     $_SESSION['task_deleted'] = "Task has been deleted!";
-    header('location: index.php');
+    header('location: ../index.php');
     exit();
 }
 

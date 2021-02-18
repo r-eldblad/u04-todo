@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . "/db/database.php");
+require_once(__DIR__ . "/../db/database.php");
 
 $sql = "SELECT * FROM tasks";
 $data = $pdo->query($sql)->fetchAll();
@@ -23,8 +23,8 @@ $data = $pdo->query($sql)->fetchAll();
         <td><?php echo $row['title']; ?></td>
         <td><?php echo $row['task_message']; ?></td>
         <td>
-            <a href="index.php?edit=<?php echo $row['task_id']; ?>">Edit</a>
-            <a href="delete.php?delete=<?php echo $row['task_id'] ?>">Delete</a>
+            <a href="src/index.php?edit=<?php echo $row['task_id']; ?>">Edit</a>
+            <a href="src/delete.php?delete=<?php echo $row['task_id'] ?>">Delete</a>
         </td>
     </tr>
     <?php

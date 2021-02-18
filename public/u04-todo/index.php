@@ -13,10 +13,10 @@
     session_start();
 
     require_once(__DIR__ . '/db/database.php');
-    require_once(__DIR__ . '/create.php');
-    require_once(__DIR__ . '/read.php');
-    require_once(__DIR__ . '/update.php');
-    require_once(__DIR__ . '/delete.php');
+    require_once(__DIR__ . '/src/create.php');
+    require_once(__DIR__ . '/src/read.php');
+    require_once(__DIR__ . '/src/update.php');
+    require_once(__DIR__ . '/src/delete.php');
 
     if (isset($_SESSION['task_added'])) { ?>
         <p id="add-message"><?php echo $_SESSION['task_added']; ?></p>
