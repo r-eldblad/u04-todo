@@ -9,8 +9,9 @@
 
 <?php 
 
-require_once(__DIR__ . '/create.php');
 require_once(__DIR__ . '/db/database.php');
+require_once(__DIR__ . '/create.php');
+require_once(__DIR__ . '/read.php');
 
 ?>
 
