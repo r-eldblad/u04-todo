@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO-App</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <?php 
 
-require_once(__DIR__ . '/db/database.php');
-require_once(__DIR__ . '/create.php');
-require_once(__DIR__ . '/read.php');
-require_once(__DIR__ . '/update.php');
-require_once(__DIR__ . '/delete.php');
+    session_start();
 
+    require_once(__DIR__ . '/db/database.php');
+    require_once(__DIR__ . '/create.php');
+    require_once(__DIR__ . '/read.php');
+    require_once(__DIR__ . '/update.php');
+    require_once(__DIR__ . '/delete.php');
+
+    if (isset($_SESSION['task_added'])) { ?>
+        <p id="add-message"><?php echo $_SESSION['task_added']; ?></p>
+        <?php unset($_SESSION['task_added']);
+    } 
+    
+    else if (isset($_SESSION['task_deleted'])) { ?>
+    <p id="delete-message"><?php echo $_SESSION['task_deleted']; ?></p>
+        <?php unset($_SESSION['task_deleted']);
+    }
 
 ?>
 
