@@ -3,7 +3,7 @@
 require_once(__DIR__ . "/../db/database.php");
 
 $sql = "SELECT * FROM tasks";
-$data = $pdo->query($sql)->fetchAll();
+$result = $pdo->query($sql)->fetchAll();
 
 ?>
 
@@ -15,7 +15,7 @@ $data = $pdo->query($sql)->fetchAll();
         <th>Action</th>
 </tr>
 
-<?php foreach($data as $row)
+<?php foreach($result as $row)
 {
     ?>
     <tr>
@@ -23,7 +23,7 @@ $data = $pdo->query($sql)->fetchAll();
         <td><?php echo $row['title']; ?></td>
         <td><?php echo $row['task_message']; ?></td>
         <td>
-            <a href="src/index.php?edit=<?php echo $row['task_id']; ?>">Edit</a>
+            <a href="index.php?edit=<?php echo $row['task_id']; ?>">Edit</a>
             <a href="src/delete.php?delete=<?php echo $row['task_id'] ?>">Delete</a>
         </td>
     </tr>
