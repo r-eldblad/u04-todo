@@ -11,7 +11,6 @@
 <?php 
 
     session_start();
-
     require_once(__DIR__ . '/db/database.php');
     require_once(__DIR__ . '/src/create.php');
     require_once(__DIR__ . '/src/read.php');
@@ -26,16 +25,27 @@
     else if (isset($_SESSION['task_deleted'])) { ?>
     <p id="delete-message"><?php echo $_SESSION['task_deleted']; ?></p>
         <?php unset($_SESSION['task_deleted']);
-    }
+    } 
+    
+    else if (isset($_SESSION['task_updated'])) { ?>
+        <p id="update-message"><?php echo $_SESSION['task_updated']; ?></p>
+            <?php unset($_SESSION['task_updated']);
+        }
 
 ?>
 
-    <form action="" method="POST">
+    <form method="POST">
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
         <label for="title">Title</label>
-        <input id="title" type="text" name="title" placeholder="Enter title">
+        <input id="title" type="text" name="title" placeholder="Enter title" value="<?php echo $title; ?>">
         <label for="task">Task</label>
-        <input id="task" type="text" name="task" placeholder="Enter task">
-        <button type="submit" name="submit">Add &#43;</button>
+        <input id="task_message" type="text" name="task_message" placeholder="Enter task" value="<?php echo $task_message; ?>">
+
+        <?php if ($update === true) { ?>
+            <button type="submit" name="update">Update</button>
+        <?php } else { ?>
+            <button type="submit" name="submit">Add &#43;</button>
+        <?php } ?>
     </form>
 </body>
 </html>
