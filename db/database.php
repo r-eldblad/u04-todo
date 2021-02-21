@@ -3,7 +3,7 @@
     $host = 'localhost';
     $db = 'todo';
     $username = 'root';
-    $password = 'root';
+    $password = 'Password123!';
     $charset = 'utf8';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
