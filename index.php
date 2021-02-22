@@ -38,8 +38,8 @@
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <label for="title">Title</label>
         <input id="title" type="text" name="title" placeholder="Enter title" value="<?php echo $title; ?>">
-        <label for="task">Task</label>
-        <input id="task_message" type="text" name="task_message" placeholder="Enter task" value="<?php echo $task_message; ?>">
+        <label for="task_message">Task</label>
+        <input id="task" type="text" name="task" placeholder="Enter task" value="<?php echo $task_message; ?>">
 
         <?php if ($update === true) { ?>
             <button type="submit" name="update">Update</button>

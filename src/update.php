@@ -25,8 +25,8 @@ if (isset($_GET['edit'])) {
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
     $title = $_POST['title'];
-    $task_message = $_POST['task_message'];
-    $sql = "UPDATE tasks SET title='$title', task_message = '$task_message' WHERE `task_id` = $id";
+    $task = $_POST['task'];
+    $sql = "UPDATE tasks SET title='$title', task_message='$task' WHERE `task_id`='$id'";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
