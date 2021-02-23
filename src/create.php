@@ -9,9 +9,9 @@ if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $task = $_POST['task'];
 
-    $sql = "INSERT INTO tasks (title, task_message) VALUES(:title, :task)";
+    $sql = "INSERT INTO tasks (title, task_message, completed) VALUES(:title, :task, :completed)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(['title' => $title, 'task' => $task]);
+    $stmt->execute(['title' => $title, 'task' => $task, 'completed' => 0]);
 
     $_SESSION['task_added'] = "Task has been added!";
     header('location: index.php');

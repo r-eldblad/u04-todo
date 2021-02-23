@@ -35,4 +35,16 @@ if (isset($_POST['update'])) {
     exit();
 
     }
+
+    if (isset($_GET['complete'])) {
+        $id = $_GET['complete'];
+        $sql = "UPDATE tasks SET completed = '1' WHERE task_id = $id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+
+        $sql = "SELECT * FROM tasks WHERE `task_id`='$id'";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+    }
+
 ?>

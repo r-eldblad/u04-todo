@@ -31,20 +31,24 @@
         <p id="update-message"><?php echo $_SESSION['task_updated']; ?></p>
             <?php unset($_SESSION['task_updated']);
         }
-
 ?>
-
+    <div class="formWrapper">
     <form method="POST">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
-        <label for="title">Title</label>
-        <input id="title" type="text" name="title" placeholder="Enter title" value="<?php echo $title; ?>">
-        <label for="task_message">Task</label>
-        <input id="task" type="text" name="task" placeholder="Enter task" value="<?php echo $task_message; ?>">
+        <label for="title">Titel</label>
+        <input id="title" type="text" name="title" placeholder="Titel" value="<?php echo $title; ?>" required>
+        <label for="task">Uppgift</label>
+        <input id="task" type="text" name="task" placeholder="Vad ska du göra?" value="<?php echo $task_message; ?>" required>
 
+        </div>
         <?php if ($update === true) { ?>
-            <button type="submit" name="update">Update</button>
+            <div class="buttonWrapper">
+            <button type="submit" name="update">Uppdatera</button>
+            </div>
         <?php } else { ?>
-            <button type="submit" name="submit">Add &#43;</button>
+            <div class="buttonWrapper">
+            <button type="submit" name="submit">Lägg till &#43;</button>
+        </div>
         <?php } ?>
     </form>
 </body>

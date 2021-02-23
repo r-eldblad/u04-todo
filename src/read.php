@@ -1,30 +1,38 @@
 <?php
 
 require_once(__DIR__ . "/../db/database.php");
+require_once(__DIR__ . "/update.php");
 
 $sql = "SELECT * FROM tasks";
 $result = $pdo->query($sql)->fetchAll();
 
 ?>
 
-<table border="3" cellpadding="5" cellspacing="5" align="center">
+<table align="center">
     <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Task</th>
-        <th>Action</th>
-</tr>
+        <th>Titel</th>
+        <th>Uppgift</th>
+        <th>Handling</th>
+        <th>Avslutad</th>
+    </tr>
 
 <?php foreach($result as $row)
 {
     ?>
     <tr>
-        <td><?php echo $row['task_id']; ?></td>
         <td><?php echo $row['title']; ?></td>
         <td><?php echo $row['task_message']; ?></td>
         <td>
-            <a href="index.php?edit=<?php echo $row['task_id']; ?>">Edit</a>
-            <a href="src/delete.php?delete=<?php echo $row['task_id'] ?>">Delete</a>
+            <a href="index.php?edit=<?php echo $row['task_id']; ?>">Ändra</a>
+            <a href="src/delete.php?delete=<?php echo $row['task_id'] ?>">Radera</a>
+            <a href="index.php?complete=<?php echo $row['task_id'] ?>">Klar</a>
+        </td>
+        <td>
+        <?php
+            if(($row['completed']) > 0) {
+                echo "Färdig!";
+            }
+            ?>
         </td>
     </tr>
     <?php
