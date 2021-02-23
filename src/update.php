@@ -30,7 +30,7 @@ if (isset($_POST['update'])) {
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
-    $_SESSION['task_updated'] = "Task has been updated!";
+    $_SESSION['task_updated'] = "Uppgiften har uppdaterats!";
     header('location: index.php');
     exit();
 
