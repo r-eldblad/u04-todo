@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['title' => $title, 'task' => $task, 'completed' => 0]);
 
-    $_SESSION['task_added'] = "Task has been added!";
+    $_SESSION['task_added'] = "Uppgiften har lagts till!";
     header('location: index.php');
     exit();
 };

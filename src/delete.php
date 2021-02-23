@@ -9,7 +9,7 @@ if(isset($_GET['delete'])) {
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
-    $_SESSION['task_deleted'] = "Task has been deleted!";
+    $_SESSION['task_deleted'] = "Uppgiften har tagits bort";
     header('location: ../index.php');
     exit();
 }
