@@ -1,6 +1,6 @@
 # u04-todo
 
-##  -- Adminer 4.7.8 MySQL dump
+## Adminer 4.7.8 MySQL dump
 
 ```
 
