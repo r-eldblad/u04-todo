@@ -2,6 +2,8 @@
 
 ##  -- Adminer 4.7.8 MySQL dump
 
+```
+
 SET NAMES utf8;
 SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
@@ -18,3 +20,5 @@ CREATE TABLE `tasks` (
 
 
 -- 2021-02-23 14:10:24
+
+```
