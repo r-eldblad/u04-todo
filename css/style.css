@@ -1,7 +1,89 @@
+/* Global Styles */
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Notification Styles */
+
 #add-message {
-    color: green;
+    color: rgb(3, 144, 3);
+    text-align: center;
 }
 
 #delete-message {
-    color: red;
+    color: rgb(207, 47, 47);
+    text-align: center;
+}
+
+#update-message {
+    color:rgb(211, 179, 0);
+    text-align: center;
+}
+
+/* Form Styles */
+
+.formWrapper {
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+label {
+    margin: 1em;
+    text-align: center;
+}
+
+input[type=text], select {
+    padding: 12px 20px;
+    margin: 1em 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+/* Button Styles */
+  
+  button[type=submit] {
+    width: 50%;
+    background-color: #ad0000;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #c04242;
+  }
+
+  .buttonWrapper {
+      text-align: center;
+  }
+
+  /* Table Styles */
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    text-align: left;
+    background-color: #ad0000;
+    color: white;
+}
+
+a {
+    color: #000;
 }
